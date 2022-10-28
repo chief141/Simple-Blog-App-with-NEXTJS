@@ -1,0 +1,22 @@
+.about_main {
+  text-align: center;
+  width: 50%;
+  align-items: center;
+  margin: 0 auto;
+  padding: 1%;
+  margin-top: 50px;
+}
+.about_us_title {
+  color: rgb(230, 230, 230);
+  letter-spacing: 10px;
+  font-size: 40pt;
+  font-family: 'Bebas Neue';
+}
+.about_content {
+  color: rgb(230, 230, 230);
+  font-family: 'Roboto Thin';
+  font-weight: 600;
+  letter-spacing: 2px;
+  padding: 3% 10%;
+  line-height: 1.3;
+}

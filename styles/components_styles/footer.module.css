@@ -1,8 +1,8 @@
 .copyrightFooter {
   color: rgb(230, 230, 230);
-  font-family: 'Roboto Thin';
   font-size: 10pt;
-  font-weight: 900;
+  font-weight: 400;
   margin-top: 8%;
-  margin-left: 15px;
+  width: 100%;
+  text-align: center;
 }
