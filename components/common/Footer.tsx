@@ -1,4 +1,4 @@
-import styles from '../styles/components_styles/footer.module.css';
+import styles from '../../styles/components_styles/footer.module.css';
 
 const CopyFooter = () => {
   return (

@@ -1,6 +1,6 @@
 import Head from 'next/head';
-import NavBar from '../components/navbar';
-import CopyFooter from '../components/Footer';
+import NavBar from '../components/common/navbar';
+import CopyFooter from '../components/common/Footer';
 import styles from '../styles/basicroutes_styles/Home.module.css';
 
 export default function Home() {
