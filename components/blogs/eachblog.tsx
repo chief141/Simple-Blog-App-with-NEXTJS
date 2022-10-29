@@ -8,11 +8,11 @@ const EachBlog = ({ Data }: { Data: blog_type[] }) => {
       <div className={styles.blogs_main}>
         {Data.map((eachData) => {
           return (
-            <div key={eachData.id}>
-              <Link href={`/blogs/${eachData.id}`}>
-                <h3 key={eachData.id}>{eachData.title}</h3>
-                <h5 key={eachData.id}>{eachData.snippet}</h5>
-                <h6 key={eachData.id}>{eachData.date}</h6>
+            <div key={eachData._id}>
+              <Link href={`/blogs/${eachData._id}`}>
+                <h3 key={eachData._id}>{eachData.title}</h3>
+                <h5 key={eachData._id}>{eachData.snippet}</h5>
+                <h6 key={eachData._id}>{eachData.createdAt}</h6>
               </Link>
             </div>
           );

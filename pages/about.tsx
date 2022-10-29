@@ -2,15 +2,12 @@ import Head from 'next/head';
 import NavBar from '../components/common/navbar';
 import CopyFooter from '../components/common/Footer';
 import styles from '../styles/basicroutes_styles/about.module.css';
+import CompHead from '../components/common/CompHead';
 
 const AboutUs = () => {
   return (
     <div>
-      <Head>
-        <title>Blogs | About</title>
-        <meta name="description" content="My Blog App." />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+      <CompHead headTitle="About us"></CompHead>
       <main></main>
       <NavBar></NavBar>
       <div className={styles.about_main}>

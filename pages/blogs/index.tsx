@@ -5,8 +5,9 @@ import NavBar from '../../components/common/navbar';
 import EachBlog from '../../components/blogs/eachblog';
 import NoBlogsFound from '../../components/blogs/noblogsfound';
 import blog_type from '../../types/blogs';
+import CompHead from '../../components/common/CompHead';
 
-export const getServerSideProps: GetServerSideProps = async () => {
+export const getServerSideProps = async () => {
   const res = await fetch('http://localhost:3000/api/blogs');
   const data = (await res.json()) as blog_type[];
   return {
@@ -22,11 +23,7 @@ const Blogs = ({
   return (
     <>
       <div>
-        <Head>
-          <title>Blogs | Latest Blogs</title>
-          <meta name="description" content="My Blog App." />
-          <link rel="icon" href="/favicon.ico" />
-        </Head>
+        <CompHead headTitle="blogs"></CompHead>
         <NavBar></NavBar>
         {data.length > 0 ? (
           <EachBlog Data={data}></EachBlog>

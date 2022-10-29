@@ -1,9 +1,9 @@
 type blog_type = {
-  id: number;
+  _id: number;
   title: string;
   snippet: string;
   body: string;
-  date: string;
+  createdAt: string;
 };
 
 export default blog_type;

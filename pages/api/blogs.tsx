@@ -12,14 +12,6 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
   switch (method) {
     case 'GET':
       try {
-        // const data = {
-        //   title: 'this is a title 1',
-        //   snippet: 'this is a snippet 1',
-        //   body: 'this is body 1',
-        // };
-        // // @ts-ignore
-        // const newblog = new Blog(data);
-        // newblog.save();
         // @ts-ignore
         const blogs = await Blog.find().sort({ createdAt: -1 });
         res.status(200).json(blogs);
@@ -27,16 +19,19 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
         res.status(400).json({ success: false });
       }
       break;
-      // case 'POST':
-      //   try {
-      //     const user = await User.create(req.body);
-      //     res.status(201).json({ success: true, data: user });
-      //   } catch (error) {
-      //     res.status(400).json({ success: false });
-      //   }
+    case 'POST':
+      try {
+        // @ts-ignore
+        const newblog = new Blog(req.body);
+        newblog.save();
+        res.status(201).redirect(`/blogs/${newblog._id}`);
+      } catch (error) {
+        console.log(error);
+        res.status(500).redirect('/blogs');
+      }
       break;
     default:
-      res.status(400).json({ success: false });
+      res.status(400).redirect('/blogs');
       break;
   }
 };

@@ -2,15 +2,12 @@ import Head from 'next/head';
 import NavBar from '../components/common/navbar';
 import CopyFooter from '../components/common/Footer';
 import styles from '../styles/basicroutes_styles/Home.module.css';
+import CompHead from '../components/common/CompHead';
 
 export default function Home() {
   return (
     <div>
-      <Head>
-        <title>Blogs</title>
-        <meta name="description" content="My Blog App." />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+      <CompHead headTitle="Home"></CompHead>
       <main>
         <NavBar></NavBar>
         <div className={styles.home_main}>
