@@ -1,7 +1,7 @@
-import dbConnect from '../../lib/dbConnect';
+import dbConnect from '../../../lib/dbConnect';
 
 // @ts-ignore
-import Blog from '../../lib/Models/Blog';
+import Blog from '../../../lib/Models/Blog';
 import { NextApiRequest, NextApiResponse } from 'next';
 
 const handler = async (req: NextApiRequest, res: NextApiResponse) => {

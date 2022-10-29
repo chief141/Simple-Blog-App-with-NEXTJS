@@ -7,7 +7,7 @@ const CreateForm = () => {
   const [body, setBody] = useState('');
 
   const postBlog = async () => {
-    const res = await fetch('http://localhost:3000/api/blogs', {
+    const res = await fetch('/api/blogs', {
       method: 'POST',
       body: JSON.stringify({
         title: title,

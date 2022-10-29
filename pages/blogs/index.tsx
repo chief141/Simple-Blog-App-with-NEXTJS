@@ -1,5 +1,4 @@
-import { GetServerSideProps, InferGetServerSidePropsType } from 'next';
-import Head from 'next/head';
+import { InferGetServerSidePropsType } from 'next';
 import CopyFooter from '../../components/common/Footer';
 import NavBar from '../../components/common/navbar';
 import EachBlog from '../../components/blogs/eachblog';
