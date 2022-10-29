@@ -1,28 +1,55 @@
-.blogs_main {
+.blogs_main > div {
+  border-left: 2.5pt solid rgb(7, 255, 247);
+  border-radius: 8px;
+  margin-bottom: 40px;
+  padding-left: 18px;
+  display: grid;
+  align-items: center;
+  width: 50vw;
+  max-width: 900px;
+  margin-top: 50pt;
+  margin-left: 25vw;
+  background-color: rgb(33, 36, 37);
+  transition: transform 0.1s linear, box-shadow 0.1s linear;
+  box-shadow: 2px 2px 2px rgb(250, 255, 247, 0.15);
+}
+.blogs_main > div:hover {
+  transform: scale(0.99);
+  box-shadow: none;
 }
 
-.each_blogs {
+.blogs_main > div > a {
+  text-decoration: none;
 }
 
-.blogs_title_link {
+.blogs_main > div > a > h3 {
+  color: rgb(230, 230, 230);
+  letter-spacing: 1px;
 }
 
-.blog_title {
+.blogs_main > div > a > h5 {
+  color: rgb(178, 178, 178);
+  font-style: italic;
 }
 
-.blog_snippet {
-}
-
-.blog_date {
+.blogs_main > div > a > h6 {
+  color: rgba(163, 163, 163, 0.5);
+  margin-left: 88%;
+  margin-right: 5%;
+  margin-bottom: 4%;
 }
 
 .no_blogs_show_text {
+  margin-top: 18%;
+  margin-left: 46%;
+  color: rgba(170, 170, 170, 1);
+  font-family: 'Roboto thin';
 }
 
-.no_blogs_found_main {
+/* .no_blogs_found_main {
 }
 
 .no_blogs_found_text {
 }
 .no_blogs_found_btn {
-}
+} */

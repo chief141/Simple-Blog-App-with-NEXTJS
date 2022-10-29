@@ -5,19 +5,19 @@ import blog_type from '../../types/blogs';
 const EachBlog = ({ Data }: { Data: blog_type[] }) => {
   return (
     <>
-      {Data.map((eachData) => {
-        return (
-          <div key={eachData.id} className={styles.blogs_main}>
-            <div className="each_blog">
-              <Link className="blog_title_link" href={`/blogs/${eachData.id}`}>
-                <h3 className="blog_title">{eachData.title}</h3>
-                <h5 className="blog_snippet">{eachData.snippet}</h5>
-                <h6 className="blog_date">{eachData.date}</h6>
+      <div className={styles.blogs_main}>
+        {Data.map((eachData) => {
+          return (
+            <div key={eachData.id}>
+              <Link href={`/blogs/${eachData.id}`}>
+                <h3 key={eachData.id}>{eachData.title}</h3>
+                <h5 key={eachData.id}>{eachData.snippet}</h5>
+                <h6 key={eachData.id}>{eachData.date}</h6>
               </Link>
             </div>
-          </div>
-        );
-      })}
+          );
+        })}
+      </div>
     </>
   );
 };
