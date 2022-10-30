@@ -5,8 +5,10 @@ import EachBlog from '../../components/blogs/eachblog';
 import NoBlogsFound from '../../components/blogs/noblogsfound';
 import CompHead from '../../components/common/CompHead';
 import Blog from '../../lib/Models/Blog';
+import dbConnect from '../../lib/dbConnect';
 
 export const getServerSideProps = async () => {
+  await dbConnect();
   const result = await Blog.find().sort({ createdAt: -1 });
   const data = JSON.parse(JSON.stringify(result));
   return {
