@@ -9,7 +9,7 @@
   max-width: 900px;
   margin-top: 50pt;
   margin-left: 25vw;
-  background-color: rgb(34, 34, 34);
+  background-color: rgb(35, 35, 35);
   transition: transform 0.1s linear, box-shadow 0.1s linear;
   box-shadow: 2px 2px 0px rgb(150, 150, 150, 0.4);
 }
