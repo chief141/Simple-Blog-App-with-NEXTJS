@@ -3,7 +3,6 @@ import CompHead from '../../../components/common/CompHead';
 import CopyFooter from '../../../components/common/Footer';
 import NavBar from '../../../components/common/navbar';
 import BlogDetails from '../../../components/blogs/blogDetails';
-import blog_type from '../../../types/blogs';
 import Blog from '../../../lib/Models/Blog';
 import dbConnect from '../../../lib/dbConnect';
 

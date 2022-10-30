@@ -1,5 +1,5 @@
 import blog_type from '../../types/blogs';
-import styles from '../../styles/blogroutes_styles/BlogDetails.module.css';
+import styles from '../../styles/blogroutes_styles/blogDetails.module.css';
 import Link from 'next/link';
 
 const BlogDetails = ({ data }: { data: blog_type }) => {
