@@ -54,15 +54,18 @@
 }
 
 .form_main_body > form > div > button {
-  width: 80px;
-  height: 40px;
-  color: rgb(160, 160, 160);
+  font-size: 11pt;
+  width: 60px;
+  height: 35px;
   transition: color 0.3s, background-color 0.3s;
   margin-bottom: 25px;
+  margin-right: 25px;
+  border-radius: 9px;
+  color: rgb(70, 180, 70);
 }
 
 .form_main_body > form > div > button:hover {
-  background-color: white;
-  color: rgb(33, 36, 37);
+  color: rgb(255, 255, 255);
+  background-color: rgb(70, 180, 70);
   cursor: pointer;
 }
