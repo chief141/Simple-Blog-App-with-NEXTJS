@@ -5,23 +5,34 @@ import dbConnect from '../../../lib/dbConnect';
 
 const handler = async (req: NextApiRequest, res: NextApiResponse) => {
   const { method } = req;
+  await dbConnect();
 
-  switch (method) {
-    case 'POST':
-      try {
-        // @ts-ignore
-        await dbConnect();
-        const newblog = new Blog(req.body);
-        newblog.save();
-        res.status(201).redirect(`/blogs/${newblog._id}`);
-      } catch (error) {
-        console.log(error);
-        res.status(500).redirect('/blogs');
-      }
-      break;
-    default:
-      res.status(400).redirect('/blogs');
-      break;
+  if (method === 'POST') {
+    try {
+      // @ts-ignore
+      const newblog = new Blog(req.body);
+      newblog.save();
+
+      res.redirect('/blogs');
+    } catch (error) {
+      console.log(error);
+      res.status(500).redirect('/blogs');
+    }
+  } else if (method === 'DELETE') {
+    try {
+      Blog.findByIdAndDelete(req.body.blogID)
+        .then((res: any) => {})
+        .catch((err: any) => {
+          console.log(err);
+        });
+      res.status(201).json({ success: true });
+    } catch (err) {
+      console.log(err);
+    }
+  } else if (method === 'PUT') {
+    Blog.findByIdAndUpdate(req.body._id, req.body).then((result: any) => {
+      res.status(200).json({ success: true });
+    });
   }
 };
 

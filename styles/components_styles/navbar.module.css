@@ -13,7 +13,7 @@
 }
 
 .navigationBar > ul > li > a {
-  color: rgb(170, 170, 170);
+  color: rgb(150, 150, 150);
   display: inline-block;
   height: 60px;
   line-height: 60px;
@@ -25,6 +25,11 @@
 }
 
 .navigationBar > ul > li > a:hover {
+  color: rgb(240, 240, 240);
+  text-shadow: 0rem 0rem 0.3rem rgba(255, 255, 255, 0.7);
+}
+
+.navigationBar > ul > li > a.navbar_active_page {
   color: rgb(250, 250, 250);
   text-shadow: 0rem 0rem 0.3rem rgba(255, 255, 255, 0.7);
 }

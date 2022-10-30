@@ -14,9 +14,9 @@ const EachBlog = ({ Data }: { Data: blog_type[] }) => {
           return (
             <div key={eachData._id}>
               <Link href={`/blogs/${eachData._id}`}>
-                <h3 key={eachData._id}>{eachData.title}</h3>
-                <h5 key={eachData._id}>{eachData.snippet}</h5>
-                <h6 key={eachData._id}>{getDate(eachData)}</h6>
+                <h3>{eachData.title}</h3>
+                <h5>{eachData.snippet}</h5>
+                <h6>{getDate(eachData)}</h6>
               </Link>
             </div>
           );

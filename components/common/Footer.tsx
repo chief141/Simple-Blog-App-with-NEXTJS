@@ -1,6 +1,7 @@
+import { FC } from 'react';
 import styles from '../../styles/components_styles/footer.module.css';
 
-const CopyFooter = () => {
+const CopyFooter: FC = () => {
   return (
     <>
       <h6 className={styles.copyrightFooter}>

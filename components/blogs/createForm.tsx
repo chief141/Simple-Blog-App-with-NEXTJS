@@ -1,7 +1,7 @@
-import { useState } from 'react';
+import { FC, useState } from 'react';
 import styles from '../../styles/blogroutes_styles/createForm.module.css';
 
-const CreateForm = () => {
+const CreateForm: FC = () => {
   const [title, setTitle] = useState('');
   const [snippet, setSnippet] = useState('');
   const [body, setBody] = useState('');
@@ -57,10 +57,9 @@ const CreateForm = () => {
             maxLength={10000}
             autoComplete="off"
             required
+            value={body}
             onChange={(e) => setBody(e.target.value)}
-          >
-            {body}
-          </textarea>
+          ></textarea>
         </div>
         <div>
           <button type="submit" onClick={postBlog}>

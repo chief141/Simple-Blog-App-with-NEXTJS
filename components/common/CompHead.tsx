@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import { FC } from 'react';
 
 const CompHead = ({ headTitle }: { headTitle: string }) => {
   return (

@@ -1,0 +1,76 @@
+.form_main_body {
+  padding-top: 50px;
+  margin: 0 auto;
+  margin-top: 70px;
+  width: 100%;
+  max-width: 800px;
+  margin-bottom: 30px;
+  background-color: rgb(30, 30, 30);
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(84, 84, 84, 0.2);
+  outline: 2px solid rgba(70, 70, 70, 1);
+}
+
+.form_main_body > form > div {
+  padding: 2px 30px;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.form_main_body > form > div > input,
+.form_main_body > form > div > textarea,
+.form_main_body > form > div > button {
+  width: 90%;
+  height: 35px;
+  padding: 3px 6px;
+  background: rgb(41, 41, 41);
+  border: none;
+  border-radius: 10px;
+  color: rgb(230, 230, 230);
+  font-size: 14pt;
+  transition: outline 0s ease-in-out;
+  letter-spacing: 2px;
+  line-height: 1.05;
+}
+
+.form_main_body > form > div > input:hover,
+.form_main_body > form > div > textarea:hover,
+.form_main_body > form > div > button:hover {
+  outline: none;
+  background-color: rgb(45, 45, 45);
+}
+
+.form_main_body > form > div > textarea {
+  height: 300px;
+  resize: vertical;
+}
+
+.form_main_body > form > div > input:focus,
+.form_main_body > form > div > textarea:focus,
+.form_main_body > form > div > button:focus {
+  outline: 1pt solid rgba(200, 200, 200, 1);
+  color: white;
+  background-color: rgb(45, 45, 45);
+}
+
+.form_main_body > form > div > button {
+  width: 80px;
+  height: 40px;
+  color: rgb(160, 160, 160);
+  transition: color 0.3s, background-color 0.3s;
+  margin-bottom: 25px;
+  margin-right: 25px;
+}
+
+.form_main_body > form > div > button:hover {
+  color: rgb(220, 220, 220);
+  cursor: pointer;
+}
+
+.form_main_body > form > div > button.edit_btn:hover {
+  background-color: rgb(7, 255, 247);
+}
+
+.form_main_body > form > div > button.delete_btn:hover {
+  background-color: crimson;
+}
