@@ -5,13 +5,14 @@ import EachBlog from '../../components/blogs/eachblog';
 import NoBlogsFound from '../../components/blogs/noblogsfound';
 import blog_type from '../../types/blogs';
 import CompHead from '../../components/common/CompHead';
+import Blog from '../../lib/Models/Blog';
 
 export const getServerSideProps = async () => {
-  const res = await fetch(`http://127.0.0.1:3000/api/blogs`);
-  const data = (await res.json()) as blog_type[];
+  const result = await Blog.find().sort({ createdAt: -1 });
+  const data = JSON.parse(JSON.stringify(result));
   return {
     props: {
-      data,
+      data: data,
     },
   };
 };

@@ -4,7 +4,11 @@ import styles from '../../styles/blogroutes_styles/BlogDetails.module.css';
 const BlogDetails = ({ data }: { data: blog_type }) => {
   return (
     <>
-      <h1>{data._id}</h1>
+      <div className={styles.detail_main}>
+        <div className={styles.detail_head}>
+          <h1 className={styles.detail_head_text}>{data.title}</h1>
+        </div>
+      </div>
     </>
   );
 };

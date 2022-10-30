@@ -1,15 +1,19 @@
-import { InferGetServerSidePropsType } from 'next';
+import { InferGetServerSidePropsType, NextApiRequest } from 'next';
 import CompHead from '../../../components/common/CompHead';
 import CopyFooter from '../../../components/common/Footer';
 import NavBar from '../../../components/common/navbar';
 import BlogDetails from '../../../components/blogs/blogDetails';
 import blog_type from '../../../types/blogs';
+import Blog from '../../../lib/Models/Blog';
+import dbConnect from '../../../lib/dbConnect';
 
 export const getServerSideProps = async (context: any) => {
+  await dbConnect();
   const { query } = context;
   const { blogID } = query;
-  const res = await fetch(`http://localhost:3000/api/blogs/${blogID}`);
-  const data = (await res.json()) as blog_type;
+  const result = await Blog.findById(blogID);
+
+  let data = JSON.parse(JSON.stringify(result));
 
   return {
     props: {
