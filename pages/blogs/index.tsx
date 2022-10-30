@@ -3,7 +3,6 @@ import CopyFooter from '../../components/common/Footer';
 import NavBar from '../../components/common/navbar';
 import EachBlog from '../../components/blogs/eachblog';
 import NoBlogsFound from '../../components/blogs/noblogsfound';
-import blog_type from '../../types/blogs';
 import CompHead from '../../components/common/CompHead';
 import Blog from '../../lib/Models/Blog';
 
