@@ -14,7 +14,7 @@ const EditForm = ({ data }: { data: blog_type }) => {
 
   const editBlog = async (e: MouseEvent) => {
     e.preventDefault();
-    const res = await fetch('http://localhost:3000/api/blogs', {
+    const res = await fetch('/api/blogs', {
       method: 'PUT',
       body: JSON.stringify({
         _id: _id,
@@ -33,7 +33,7 @@ const EditForm = ({ data }: { data: blog_type }) => {
   const mouseClickHandler = async (e: MouseEvent) => {
     e.preventDefault();
     if (confirm('Are you sure you want to delete this blog?')) {
-      const res = await fetch('http://localhost:3000/api/blogs', {
+      const res = await fetch('/api/blogs', {
         method: 'DELETE',
         body: JSON.stringify({
           blogID: _id,
