@@ -3,7 +3,8 @@ type blog_type = {
   title: string;
   snippet: string;
   body: string;
-  createdAt: string;
+  createdAt: any;
+  updatedAt: any;
 };
 
 export default blog_type;
