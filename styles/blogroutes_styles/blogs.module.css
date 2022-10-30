@@ -46,10 +46,38 @@
   font-family: 'Roboto thin';
 }
 
-/* .no_blogs_found_main {
+.no_blogs_found_main {
+  margin-left: 0;
+  width: 100%;
+  text-align: center;
+  margin-top: 15%;
+  margin-bottom: 5%;
 }
 
 .no_blogs_found_text {
+  font-size: 40pt;
+  font-family: 'Marriwether';
+  color: rgb(170, 170, 170);
+  letter-spacing: 2px;
 }
 .no_blogs_found_btn {
-} */
+  font-family: 'Roboto';
+  letter-spacing: 1px;
+  font-size: 16pt;
+  width: 150px;
+  height: 50px;
+  transition: color 0.3s, background-color 0.3s;
+  margin-bottom: 25px;
+  margin-right: 25px;
+  border-radius: 9px;
+  color: rgb(44, 156, 152);
+  background-color: rgb(45, 45, 45);
+  border: none;
+  outline: none;
+}
+
+.no_blogs_found_btn:hover {
+  color: rgb(255, 255, 255);
+  background-color: rgb(48, 170, 166);
+  cursor: pointer;
+}
