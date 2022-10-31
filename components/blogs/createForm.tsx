@@ -7,17 +7,26 @@ const CreateForm: FC = () => {
   const [body, setBody] = useState('');
 
   const postBlog = async () => {
-    const res = await fetch('/api/blogs', {
-      method: 'POST',
-      body: JSON.stringify({
-        title: title,
-        snippet: snippet,
-        body: body,
-      }),
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    });
+    if (
+      150 > title.length &&
+      title.length > 40 &&
+      150 > snippet.length &&
+      snippet.length > 40 &&
+      10000 > body.length &&
+      body.length > 500
+    ) {
+      const res = await fetch('/api/blogs', {
+        method: 'POST',
+        body: JSON.stringify({
+          title: title,
+          snippet: snippet,
+          body: body,
+        }),
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
+    }
   };
 
   return (

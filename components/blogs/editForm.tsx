@@ -14,20 +14,30 @@ const EditForm = ({ data }: { data: blog_type }) => {
 
   const editBlog = async (e: MouseEvent) => {
     e.preventDefault();
-    const res = await fetch('/api/blogs', {
-      method: 'PUT',
-      body: JSON.stringify({
-        _id: _id,
-        title: title,
-        snippet: snippet,
-        body: body,
-      }),
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    }).then(() => {
-      router.push(`/blogs/${_id}`);
-    });
+
+    if (
+      150 > title.length &&
+      title.length > 40 &&
+      150 > snippet.length &&
+      snippet.length > 40 &&
+      10000 > body.length &&
+      body.length > 500
+    ) {
+      const res = await fetch('/api/blogs', {
+        method: 'PUT',
+        body: JSON.stringify({
+          _id: _id,
+          title: title,
+          snippet: snippet,
+          body: body,
+        }),
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      }).then(() => {
+        router.push(`/blogs/${_id}`);
+      });
+    }
   };
 
   const mouseClickHandler = async (e: MouseEvent) => {
